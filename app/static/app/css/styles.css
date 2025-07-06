@@ -1,0 +1,79 @@
+@font-face {
+  font-family: Gabriel Weiss Friends Font;
+  src: url(../font/friends.TTF);
+}
+
+* {
+  font-family: system-ui;
+}
+
+main * {
+  color: black;
+}
+
+header img {
+  width: 165px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#index {
+  background-image: radial-gradient(circle, #986fb3, #986fb3, #624872);
+}
+
+main div {
+  width: fit-content;
+  margin: auto;
+}
+
+main h1 {
+  font-size: 60px;
+  font-family: "Gabriel Weiss Friends Font";
+  letter-spacing: 5px;
+}
+
+.w3-content {
+  max-width: 1100px !important;
+}
+
+footer a {
+  font-size: 1.4rem;
+  color: white;
+}
+
+.copyright {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.signature {
+  width: 80px;
+}
+
+.red {
+  color: #e91e23;
+}
+
+.blue {
+  color: #02b2e7;
+}
+
+.yellow {
+  color: #fabc16;
+}
+
+p {
+  text-align: justify;
+}
+
+#logo {
+  background-image: url(../img/friends-logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 150px;
+  height: 25px;
+}
