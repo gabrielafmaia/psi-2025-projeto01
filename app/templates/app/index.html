@@ -1,3 +1,36 @@
-{% extends "app/base.html" %}
-{% block title %}Início{% endblock title %}
-{% block content %}{% endblock content %}
+{% extends "app/base.html" %} 
+{% load static %} 
+{% block title %}Início{% endblock title %} 
+{% block image %}{% static 'app/img/bg-home.jpg' %}{% endblock %} 
+{% block content %}
+<main id="index">
+  <div class="w3-content">
+    <div class="w3-row w3-padding-64 d-flex">
+      <div class="w3-col m6 w3-padding-large w3-hide-small">
+        <img src="{% static 'app/img/friends-frame.svg' %}" />
+      </div>
+      <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center">H<span class="red">•</span>i<span class="blue">•</span>s<span class="yellow">•</span>t<span class="red">•</span>ó<span class="yellow">•</span>r<span class="blue">•</span>i<span class="red">•</span>a</h1>
+        <br />
+        <p class="w3-large">
+          Em 22 de setembro de 1994, a NBC exibia o primeiro episódio de Friends, série criada por David Crane e Marta Kauffman que se tornou um fenômeno mundial. A trama sobre seis amigos na casa dos 20 anos que lutam para encontrar estabilidade em
+          sua vida ganhou o mundo, e transformou o sexteto formado por Jennifer Aniston, Courteney Cox, Lisa Kudrow, Matt LeBlanc, Matthew Perry e David Schwimmer ícones da TV.
+        </p>
+        <p class="w3-large">
+          O impacto cultural conquistado por Friends fez da série uma das mais amadas da história da televisão norte-americana. Seus personagens são lembrados até hoje pelos fãs, enquanto seus 236 episódios ficam em constante reexibição em centenas
+          de países, sendo disponibilizados em plataformas de streaming e ainda figurando entre os programas mais assistidos, décadas após o fim da série, em 2004.
+        </p>
+        <br />
+        <div>
+          <img src="{% static 'app/img/signature-jennifer-aniston.png' %}" class="signature" />
+          <img src="{% static 'app/img/signature-courteney-cox.png' %}" class="signature" />
+          <img src="{% static 'app/img/signature-lisa-kudrow.svg' %}" class="signature" />
+          <img src="{% static 'app/img/signature-matt-leblanc.png' %}" class="signature" />
+          <img src="{% static 'app/img/signature-matthew-perry.png' %}" class="signature" />
+          <img src="{% static 'app/img/signature-david-schwimmer.svg' %}" class="signature" />
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock content %}

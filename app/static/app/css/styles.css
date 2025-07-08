@@ -1,21 +1,19 @@
 @font-face {
   font-family: Gabriel Weiss Friends Font;
-  src: url(../font/friends.TTF);
+  src: url(../font/friends-font.TTF);
 }
 
 * {
   font-family: system-ui;
 }
 
-main * {
-  color: black;
-}
-
-header img {
-  width: 165px;
-}
-
 header {
+  background-image: url(../img/bg-home.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+.navbar {
   position: fixed;
   width: 100%;
   top: 0px;
@@ -24,6 +22,10 @@ header {
 
 #index {
   background-image: radial-gradient(circle, #986fb3, #986fb3, #624872);
+}
+
+main * {
+  color: black;
 }
 
 main div {
@@ -35,6 +37,11 @@ main h1 {
   font-size: 60px;
   font-family: "Gabriel Weiss Friends Font";
   letter-spacing: 5px;
+  text-shadow: 3px 3px 0px #624872;
+}
+
+main p {
+  text-align: justify;
 }
 
 .w3-content {
@@ -66,14 +73,18 @@ footer a {
   color: #fabc16;
 }
 
-p {
-  text-align: justify;
-}
-
 #logo {
   background-image: url(../img/friends-logo.svg);
-  background-repeat: no-repeat;
   background-size: contain;
+  background-repeat: no-repeat;
   width: 150px;
   height: 25px;
+}
+
+.separator-line {
+  position: absolute;
+  height: 40px;
+  width: 100%;
+  bottom: 0px;
+  background-image: linear-gradient(to bottom, #02b2e7 0%, #02b2e7 33.33%, #fabc16 33.33%, #fabc16 66.66%, #e91e23 66.66%, #e91e23 100%);
 }
