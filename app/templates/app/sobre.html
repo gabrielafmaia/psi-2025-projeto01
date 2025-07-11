@@ -1,4 +1,18 @@
 {% extends "app/base.html" %}
 {% load static %}
-{% block title %}Sobre{% endblock title %}
-{% block content %}{% endblock content %}
+{% block title %}Sobre{% endblock title %}.
+{% block content %}<main id="index">
+    <div class="w3-content">
+      <div class="w3-row w3-padding-64 d-flex">
+        <div class="w3-col m6 w3-padding-large w3-hide-small">
+          <img src="{% static 'app/img/friends-frame.svg' %}" />
+        </div>
+        <div class="w3-col m6 w3-padding-large">
+          <h1 class="w3-center">S<span class="red">•</span>o<span class="blue">•</span>b<span class="yellow">•</span>r<span class="red">•</span>e</h1>
+          <br />
+          <h1 class="w3-center">A<span class="red">•</span>u<span class="blue">•</span>t<span class="yellow">•</span>o<span class="red">•</span>r<span class="blue">•</span>e<span class="yellow">•</span>s</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>{% endblock content %}
