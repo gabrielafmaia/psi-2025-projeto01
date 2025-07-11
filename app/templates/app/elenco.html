@@ -1,4 +1,15 @@
 {% extends "app/base.html" %}
 {% load static %}
 {% block title %}Elenco{% endblock title %}
-{% block content %}{% endblock content %}
+{% block content %}
+{% for ator in atores %}
+<div class="card" style="width: 18rem;">
+    <img src="{% static ator.imagem %}" class="card-img-top" style="width: 200px;">
+    <div class="card-body">
+      <p class="card-text"><a href="{% url "ator" ator.id %}">Nome: {{ ator.nome }}</a></p>
+      <p class="card-text">Idade: {{ ator.idade }}</p>
+      <p class="card-text">Local de nascimento: {{ ator.local_nasc }}</p>
+    </div>
+</div>
+{% endfor %}
+{% endblock content %}
