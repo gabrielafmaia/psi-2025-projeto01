@@ -1,15 +1,23 @@
 {% extends "app/base.html" %}
 {% load static %}
 {% block title %}Elenco{% endblock title %}
+{% block imagem_header %}{% static "app/img/background-red.png" %}{% endblock imagem_header %}
+{% block titulo %}Elenco{% endblock titulo %} {% block subtitulo %}Conheça o cast de Friends{% endblock subtitulo %}
 {% block content %}
 {% for ator in atores %}
-<div class="card" style="width: 18rem;">
-    <img src="{% static ator.imagem %}" class="card-img-top" style="width: 200px;">
-    <div class="card-body">
-      <p class="card-text"><a href="{% url "ator" ator.id %}">Nome: {{ ator.nome }}</a></p>
-      <p class="card-text">Idade: {{ ator.idade }}</p>
-      <p class="card-text">Local de nascimento: {{ ator.local_nasc }}</p>
+<a href="{% url 'ator' ator.id %}">
+  <div class="w3-third card">
+    <img src="{% static ator.imagem %}" class="w3-hover-opacity card-img-top w-100" />
+    <div class="card-body text-start">
+      <h5 class="card-title">{{ ator.nome }}</h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary">{{ ator.personagem }}</h6>
+      <p class="card-text">
+        {{ ator.idade }} anos
+        <br />
+        {{ ator.local_nasc }}
+      </p>
     </div>
-</div>
-{% endfor %}
+  </div>
+</a>
+{% endfor %} 
 {% endblock content %}

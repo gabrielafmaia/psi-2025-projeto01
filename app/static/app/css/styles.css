@@ -1,90 +1,34 @@
-@font-face {
-  font-family: Gabriel Weiss Friends Font;
-  src: url(../font/friends-font.TTF);
-}
-
-* {
+*,
+h3 {
   font-family: system-ui;
 }
 
+h2 {
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
 header {
-  background-image: url(../img/bg-home.jpg);
-  background-size: cover;
   height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+
+.navbar img {
+  width: 160px;
 }
 
 .navbar {
   position: fixed;
-  width: 100%;
   top: 0px;
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-#index {
-  background-image: radial-gradient(circle, #986fb3, #986fb3, #624872);
-}
-
-main * {
-  color: black;
-}
-
-main div {
-  width: fit-content;
-  margin: auto;
-}
-
-main h1 {
-  font-size: 60px;
-  font-family: "Gabriel Weiss Friends Font";
-  letter-spacing: 5px;
-  text-shadow: 3px 3px 0px #624872;
-}
-
-main p {
-  text-align: justify;
+  background-color: rgb(0, 0, 0, 0.2);
+  width: 100%;
 }
 
 .w3-content {
-  max-width: 1100px !important;
-}
-
-footer a {
-  font-size: 1.4rem;
-  color: white;
-}
-
-.copyright {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.signature {
-  width: 80px;
-}
-
-.red {
-  color: #e91e23;
-}
-
-.blue {
-  color: #02b2e7;
-}
-
-.yellow {
-  color: #fabc16;
-}
-
-#logo {
-  background-image: url(../img/friends-logo.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 150px;
-  height: 25px;
-}
-
-.separator-line {
-  position: absolute;
-  height: 40px;
-  width: 100%;
-  bottom: 0px;
-  background-image: linear-gradient(to bottom, #02b2e7 0%, #02b2e7 33.33%, #fabc16 33.33%, #fabc16 66.66%, #e91e23 66.66%, #e91e23 100%);
+  max-width: 1000px !important;
 }

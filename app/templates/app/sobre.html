@@ -1,18 +1,22 @@
-{% extends "app/base.html" %}
-{% load static %}
-{% block title %}Sobre{% endblock title %}.
-{% block content %}<main id="index">
-    <div class="w3-content">
-      <div class="w3-row w3-padding-64 d-flex">
-        <div class="w3-col m6 w3-padding-large w3-hide-small">
-          <img src="{% static 'app/img/friends-frame.svg' %}" />
-        </div>
-        <div class="w3-col m6 w3-padding-large">
-          <h1 class="w3-center">S<span class="red">•</span>o<span class="blue">•</span>b<span class="yellow">•</span>r<span class="red">•</span>e</h1>
-          <br />
-          <h1 class="w3-center">A<span class="red">•</span>u<span class="blue">•</span>t<span class="yellow">•</span>o<span class="red">•</span>r<span class="blue">•</span>e<span class="yellow">•</span>s</h1>
-          </div>
-        </div>
-      </div>
+{% extends "app/base.html" %} 
+{% load static %} 
+{% block title %}Sobre{% endblock title %} 
+{% block imagem_header %}{% static "app/img/background-blue.png" %}{% endblock imagem_header %} 
+{% block titulo %}Sobre{% endblock titulo %} 
+{% block subtitulo %}Descubra detalhes sobre o site{% endblock subtitulo %} 
+{% block content %}
+<section class="row d-flex align-items-center">
+  <div class="col m6 w3-hide-medium w3-hide-small pe-5">
+    <img src="{% static 'app/img/friends-chicken.svg' %}" class="w3-round w3-image" />
+  </div>
+  <div class="col">
+    {% for item in sobre %}
+    <div>
+      <h2 class="w3-wide mt-0">{{ item.titulo }}</h2>
+      <p class="w3-opacity"><i>{{ item.subtitulo }}</i></p>
+      {{ item.conteudo|safe }}
     </div>
-  </main>{% endblock content %}
+    {% endfor %}
+  </div>
+</section>
+{% endblock content %}

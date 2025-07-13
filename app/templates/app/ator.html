@@ -1,7 +1,7 @@
-{% extends "app/base.html" %}
-{% load static %}
-{% block title %}Elenco{% endblock title %}
-{% block content %} 
-<img src="{% static imagem %}">
-<h1>{{ nome }}</h1>
-{% endblock content %}
+{% extends "app/base.html" %} 
+{% load static %} 
+{% block title %}{{ nome }}{% endblock title %}
+{% block imagem_header %}{% endblock imagem_header %}
+{% block titulo %}{{ nome }}{% endblock titulo %}
+{% block subtitulo %}{{ personagem }}{% endblock subtitulo %}
+{% block content %}{% endblock content %}

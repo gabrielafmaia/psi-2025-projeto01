@@ -1,20 +1,41 @@
-{% extends "app/base.html" %} 
-{% load static %} 
-{% block title %}Início{% endblock title %} 
-{% block image %}{% static 'app/img/bg-home.jpg' %}{% endblock %} 
+{% extends "app/base.html" %}
+{% load static %}
+{% block title %}Início{% endblock title %}
+{% block imagem_header %}{% static "app/img/background-yellow.png" %}{% endblock imagem_header %}
+{% block titulo %}Bem-vindo{% endblock titulo %}
+{% block subtitulo %}Navegue pelo site{% endblock subtitulo %}
 {% block content %}
-<main id="index">
-  <div class="w3-content">
-    <div class="w3-row w3-padding-64 d-flex">
-      <div class="w3-col m6 w3-padding-large w3-hide-small">
-        <img src="{% static 'app/img/friends-frame.svg' %}" />
+<section>
+  <h2 class="w3-wide mt-0">{{ introducao.titulo }}</h2>
+  <p class="w3-opacity"><i>{{ introducao.subtitulo }}</i></p>
+  <p class="w3-justify mb-0">{{ introducao.conteudo }}</p>
+  <div class="w3-row w3-padding-32" style="padding-bottom: 0px !important">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
-      <div>
-        <h1>{{ conteudo|safe }}</h1>
-        <br />
-        <p>{{ conteudo|safe }}</p>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static introducao.primeira_foto %}" class="d-block w-100" />
+        </div>
+        <div class="carousel-item">
+          <img src="{% static introducao.segunda_foto %}" class="d-block w-100" />
+        </div>
+        <div class="carousel-item">
+          <img src="{% static introducao.terceira_foto %}" class="d-block w-100" />
+        </div>
       </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </div>
-</main>
+</section>
 {% endblock content %}
