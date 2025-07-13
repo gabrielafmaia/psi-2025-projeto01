@@ -2,22 +2,41 @@
 {% load static %}
 {% block title %}Elenco{% endblock title %}
 {% block imagem_header %}{% static "app/img/background-red.png" %}{% endblock imagem_header %}
-{% block titulo %}Elenco{% endblock titulo %} {% block subtitulo %}Conheça o cast de Friends{% endblock subtitulo %}
+{% block titulo %}Elenco{% endblock titulo %}
+{% block subtitulo %}Conheça o cast de Friends{% endblock subtitulo %}
 {% block content %}
-{% for ator in atores %}
-<a href="{% url 'ator' ator.id %}">
-  <div class="w3-third card">
-    <img src="{% static ator.imagem %}" class="w3-hover-opacity card-img-top w-100" />
-    <div class="card-body text-start">
-      <h5 class="card-title">{{ ator.nome }}</h5>
-      <h6 class="card-subtitle mb-2 text-body-secondary">{{ ator.personagem }}</h6>
-      <p class="card-text">
-        {{ ator.idade }} anos
-        <br />
-        {{ ator.local_nasc }}
-      </p>
+<section class="row g-2">
+  {% for ator in atores %}
+  <!-- Card -->
+  <div class="w3-third">
+    <div class="card" data-bs-toggle="modal" data-bs-target="#atorModal{{ ator.id }}">
+      <img src="{% static ator.imagem %}" class="card-img-top" />
+      <div class="card-body text-start">
+        <h5 class="card-title">{{ ator.nome }}</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">{{ ator.personagem }}</h6>
+        <p class="card-text">
+          {{ ator.idade }} anos<br />
+          {{ ator.local_nasc }}
+        </p>
+      </div>
     </div>
   </div>
-</a>
-{% endfor %} 
+
+  <!-- Modal -->
+  <div class="modal fade" id="atorModal{{ ator.id }}" tabindex="-1" aria-labelledby="atorModalLabel{{ ator.id }}" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title m-0" id="atorModalLabel{{ ator.id }}">{{ ator.nome }} como {{ ator.personagem }}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-start p-4">
+          <img src="{% static ator.imagem %}" class="img-fluid mb-3" />
+          <p class="m-0">{{ ator.descricao }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</section>
 {% endblock content %}

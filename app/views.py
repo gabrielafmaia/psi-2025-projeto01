@@ -17,6 +17,7 @@ atores = [
         "id": 1,
         "local_nasc": "Califórnia, EUA",
         "imagem": "app/img/cast-rachel.webp",
+        "descricao": "Jennifer Aniston nasceu o 11 de fevereiro de 1969 em Sherman Oaks, Califórnia, EUA. É atriz e produtora, conhecida pelo seu trabalho em Friends (1994), Cake: Uma Razão para Viver (2014) e Família do Bagulho (2013). Foi casada com Justin Theroux e Brad Pitt.",
     },
 
     {
@@ -26,6 +27,7 @@ atores = [
         "id": 2,
         "local_nasc": "Alabama, EUA",
         "imagem": "app/img/cast-monica.webp",
+        "descricao": "Courteney Cox nasceu o 15 de junho de 1964 em Birmingham, Alabama, EUA. É atriz e produtora, conhecida pelo seu trabalho em Friends (1994), Pânico (1996) e Pânico 3 (2000). Foi casada com David Arquette.",
     },
 
     {
@@ -35,6 +37,7 @@ atores = [
         "id": 3,
         "local_nasc": "Califórnia, EUA",
         "imagem": "app/img/cast-phoebe.webp",
+        "descricao": "Lisa Kudrow nasceu o 30 de julho de 1963 em Los Angeles, Califórnia, EUA. É atriz e produtora, conhecida pelo seu trabalho em Friends (1994), The Comeback (2005) e O Oposto do Sexo (1998). É casada com Michel Stern desde o 27 de maio de 1995 e tem um filho.",
     },
 
     {
@@ -44,6 +47,7 @@ atores = [
         "id": 4,
         "local_nasc": "Nova York, EUA",
         "imagem": "app/img/cast-ross.webp",
+        "descricao": "David Schwimmer nasceu o 2 de novembro de 1966 em Nova Iorque, EUA. É ator e diretor, conhecido pelo seu trabalho em Friends (1994), Seis Dias, Sete Noites (1998) e Irmãos de Guerra (2001). É casado com Zoe Buckman desde o 3 de junho de 2010 e tem um filho.",
     },
 
     {
@@ -53,6 +57,7 @@ atores = [
         "id": 5,
         "local_nasc": "Massachusetts, EUA",
         "imagem": "app/img/cast-joey.webp",
+        "descricao": "Matt LeBlanc nasceu o 25 de julho de 1967 em Newton, Massachusetts, EUA. É ator e produtor, conhecido pelo seu trabalho em Friends (1994), Perdidos no Espaço: O Filme (1998) e Episodes (2011). Foi casado com Missy McKnight.",
     },
 
     {
@@ -62,24 +67,25 @@ atores = [
         "id": 6,
         "local_nasc": "Massachusetts, EUA",
         "imagem": "app/img/cast-chandler.webp",
+        "descricao": "Matthew Perry nasceu o 19 de agosto de 1969 em Massachusetts, EUA. Era ator e produtor e foi conhecido pelo seu trabalho em Friends (1994), Studio 60 on the Sunset Strip (2006) e Meu Vizinho Mafioso (2000). Faleceu o 28 de outubro de 2023 em Los Angeles, Califórnia, EUA.",
     }
 ]
 
 sobre = [
     {
         "titulo": "Sobre o site",
-        "conteudo": "<p class='w3-justify'>Este site foi desenvolvido como parte do nosso primeiro projeto na disciplina de Programação de Sistemas para Internet, com objetivo de colocar em prática os conhecimentos adquiridos em sala de aula sobre desenvolvimento de sites dinâmicos. Para isso, utilizamos o framework Django.</p>",
+        "conteudo": "Este site foi desenvolvido como parte do nosso primeiro projeto na disciplina de Programação de Sistemas para Internet, com objetivo de colocar em prática os conhecimentos adquiridos em sala de aula sobre desenvolvimento de sites dinâmicos. Para isso, utilizamos o framework Django.",
     },
 
     {
         "titulo": "Autores",
         "subtitulo": "Beatriz & Gabriela",
-        "conteudo": "<p class='w3-justify'>As responsáveis pelo desenvolvimento deste website são <i>Anna Beatriz Faustino Gomes</i> e <i>Gabriela de Freitas Maia</i>, ambas discentes do curso técnico integrado em Informática para Internet do campus São Paulo do Potengi.</p>",
+        "conteudo": "As responsáveis pelo desenvolvimento deste website são <i>Anna Beatriz Faustino Gomes</i> e <i>Gabriela de Freitas Maia</i>, ambas discentes do curso técnico integrado em Informática para Internet do campus São Paulo do Potengi.",
     },
 
     {
         "titulo": "Créditos",
-        "conteudo": "<p class='w3-justify mb-0'>Todas as informações e imagens utilizadas neste site estão disponíveis para uso público na internet e foram utilizadas com fim exclusivamente educacional.</p>",
+        "conteudo": "Todas as informações e imagens utilizadas neste site foram obtidas a partir de fontes de acesso público na internet, sendo utilizadas com fim exclusivamente educacional.",
     }
 ]
 

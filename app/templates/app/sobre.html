@@ -3,18 +3,18 @@
 {% block title %}Sobre{% endblock title %} 
 {% block imagem_header %}{% static "app/img/background-blue.png" %}{% endblock imagem_header %} 
 {% block titulo %}Sobre{% endblock titulo %} 
-{% block subtitulo %}Descubra detalhes sobre o site{% endblock subtitulo %} 
+{% block subtitulo %}Saiba mais sobre o site{% endblock subtitulo %} 
 {% block content %}
 <section class="row d-flex align-items-center">
   <div class="col m6 w3-hide-medium w3-hide-small pe-5">
     <img src="{% static 'app/img/friends-chicken.svg' %}" class="w3-round w3-image" />
   </div>
-  <div class="col">
+  <div class="col d-flex flex-column gap-4 ">
     {% for item in sobre %}
     <div>
       <h2 class="w3-wide mt-0">{{ item.titulo }}</h2>
       <p class="w3-opacity"><i>{{ item.subtitulo }}</i></p>
-      {{ item.conteudo|safe }}
+      <p class='w3-justify mb-0'>{{ item.conteudo|safe }}</p>
     </div>
     {% endfor %}
   </div>
