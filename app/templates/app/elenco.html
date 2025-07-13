@@ -30,8 +30,8 @@
           <h5 class="modal-title m-0" id="atorModalLabel{{ ator.id }}">{{ ator.nome }} como {{ ator.personagem }}</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-        <div class="modal-body text-start p-4">
-          <img src="{% static ator.imagem %}" class="img-fluid mb-3" />
+        <div class="modal-body p-4">
+          <img src="{% static ator.imagem %}" class="img-fluid mb-4" />
           <p class="m-0">{{ ator.descricao }}</p>
         </div>
       </div>
