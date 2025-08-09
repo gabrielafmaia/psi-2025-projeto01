@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Site, Inicio, Elenco, Ator, Sobre
+from .models import Site, Inicio, CarrosselItem, Elenco, Ator, Sobre, SecaoSobre
 
 # introducao = {
 #     "titulo": "História",
@@ -93,14 +93,15 @@ from .models import Site, Inicio, Elenco, Ator, Sobre
 def index(request):
     context = {
         'inicio': Inicio.objects.first(),
+        'carrossel_itens': CarrosselItem.objects.all(),
         'site': Site.objects.first(),
     }
     return render(request, 'app/index.html', context)
 
 def elenco(request):
     context = {
-        'elenco': Elenco.objects.all(),
         'atores': Ator.objects.all(),
+        'elenco': Elenco.objects.first(),
         'site': Site.objects.first(),
     }
     return render(request, 'app/elenco.html', context)
@@ -108,12 +109,13 @@ def elenco(request):
 def sobre(request):
     context = {
         'sobre': Sobre.objects.first(),
+        'secoes': SecaoSobre.objects.all(),
         'site': Site.objects.first(),
     }
     return render(request, 'app/sobre.html', context)
 
 def ator(request, id_ator):
-    ator = get_object_or_404(Ator, pk=id_ator)
+    ator = get_object_or_404(Ator, id=id_ator)
     context = {
         'ator': ator,
     }

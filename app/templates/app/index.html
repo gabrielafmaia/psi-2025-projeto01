@@ -8,7 +8,7 @@
 <section>
   <h2 class="w3-wide mt-0">{{ inicio.titulo_conteudo }}</h2>
   <p class="w3-opacity"><i>{{ inicio.subtitulo_conteudo }}</i></p>
-  <p class="w3-justify mb-0">{{ inicio.texto }}</p>
+  <p class="w3-justify mb-0">{{ inicio.texto|safe }}</p>
 
   <!-- Carousel -->
   <div class="w3-row w3-padding-32" style="padding-bottom: 0px !important">
@@ -19,16 +19,11 @@
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <!-- Ajeitar!!!! -->
-          <img src="{{ inicio.foto.url }}" class="d-block w-100" />
+        {% for item in carrossel_itens %}
+        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+          <img src="{{ item.imagem.url }}" class="d-block w-100" />
         </div>
-        <div class="carousel-item active">
-          <img src="{{ inicio.foto.url }}" class="d-block w-100" />
-        </div>
-        <div class="carousel-item active">
-          <img src="{{ inicio.foto.url }}" class="d-block w-100" />
-        </div>
+        {% endfor %}
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
