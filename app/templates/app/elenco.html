@@ -1,22 +1,22 @@
 {% extends "app/base.html" %}
 {% load static %}
 {% block title %}Elenco{% endblock title %}
-{% block imagem_header %}{% static "app/img/background-red.png" %}{% endblock imagem_header %}
-{% block titulo %}Elenco{% endblock titulo %}
-{% block subtitulo %}Conheça o cast de Friends{% endblock subtitulo %}
+{% block imagem_header %}{{ elenco.banner.url }}{% endblock imagem_header %}
+{% block titulo %}{{ elenco.titulo_apresentacao }}{% endblock titulo %}
+{% block subtitulo %}{{ elenco.subtitulo_apresentacao }}{% endblock subtitulo %}
 {% block content %}
 <section class="row g-2">
   {% for ator in atores %}
   <!-- Card -->
   <div class="w3-third">
     <div class="card" data-bs-toggle="modal" data-bs-target="#atorModal{{ ator.id }}">
-      <img src="{% static ator.imagem %}" class="card-img-top" />
+      <img src="{{ ator.imagem.url }}" class="card-img-top" />
       <div class="card-body text-start">
         <h5 class="card-title">{{ ator.nome }}</h5>
         <h6 class="card-subtitle mb-2 text-body-secondary">{{ ator.personagem }}</h6>
         <p class="card-text">
           {{ ator.idade }} anos<br />
-          {{ ator.local_nasc }}
+          {{ ator.local_nascimento }}
         </p>
       </div>
     </div>
@@ -31,7 +31,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body p-4">
-          <img src="{% static ator.imagem %}" class="img-fluid mb-4" />
+          <img src="{{ ator.imagem.url }}" class="img-fluid mb-4" />
           <p class="m-0">{{ ator.descricao }}</p>
         </div>
       </div>
