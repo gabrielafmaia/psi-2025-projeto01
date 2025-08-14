@@ -19,7 +19,8 @@
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
-        {% for item in CarrosselItem %}
+        {% for item in carrossel_itens %}
+        <!-- forloop.first: tag do django que permite testar se o loop está em sua primeira iteração. -->
         <div class="carousel-item {% if forloop.first %}active{% endif %}">
           <img src="{{ item.imagem.url }}" class="d-block w-100" />
         </div>

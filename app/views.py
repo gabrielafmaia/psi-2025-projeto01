@@ -109,7 +109,7 @@ def elenco(request):
 def sobre(request):
     context = {
         'sobre': Sobre.objects.first(),
-        'secoes': SecaoSobre.objects.all(),
+        'secoes_sobre': SecaoSobre.objects.all(),
         'site': Site.objects.first(),
     }
     return render(request, 'app/sobre.html', context)

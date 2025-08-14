@@ -55,7 +55,7 @@ class Sobre(models.Model):
     titulo_apresentacao = models.CharField(max_length=50)
     subtitulo_apresentacao = models.CharField(max_length=100)
     banner = models.ImageField(upload_to='banners-sobre/')
-    svg = models.FileField(upload_to='svgs/')
+    svg = models.FileField(upload_to='svgs/', null=True)
 
     def __str__(self):
         return self.titulo_apresentacao
