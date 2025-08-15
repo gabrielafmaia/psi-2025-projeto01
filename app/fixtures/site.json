@@ -1,0 +1,11 @@
+[
+  {
+    "model": "app.site",
+    "pk": 1,
+    "fields": {
+      "nome": "Friends",
+      "logo": "logos/14.svg",
+      "copyright": "Friends Community"
+    }
+  }
+]
